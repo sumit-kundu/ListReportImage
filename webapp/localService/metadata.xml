@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:Reference
+		Uri="https://dldf20app00.irving.zalecorp.com:8001/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='S4FIN')/$value"
+		xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="ZFIAP_SOS_IMAGES_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="ZCDS_C_SOS_SKUIMAGEType" sap:label="SOS SKU Images" sap:content-version="1">
+				<Key><PropertyRef Name="CatalogSKU"/></Key><Property Name="CatalogSKU" Type="Edm.String" Nullable="false" MaxLength="40" sap:display-format="UpperCase" sap:label="Article"
+					sap:quickinfo="Article Number"/><Property Name="CatalogItmKey" Type="Edm.Int32" sap:label="Catalog item key" sap:quickinfo="Catalog Item Key"/><Property Name="CatalogSKUDesc" Type="Edm.String" MaxLength="40" sap:label="Article description"/><Property Name="GetUrl" Type="Edm.String" MaxLength="109" sap:display-format="UpperCase"/><NavigationProperty Name="to_SOSImage" Relationship="ZFIAP_SOS_IMAGES_SRV.assoc_C07F0735F92CF7E58F66BD3E878D3E14"
+					FromRole="FromRole_assoc_C07F0735F92CF7E58F66BD3E878D3E14" ToRole="ToRole_assoc_C07F0735F92CF7E58F66BD3E878D3E14"/></EntityType>
+			<EntityType Name="ZCDS_I_SOS_IMAGEType" m:HasStream="true" sap:label="SOS SKU Images" sap:content-version="1">
+				<Key><PropertyRef Name="CatalogSKU"/></Key><Property Name="CatalogSKU" Type="Edm.String" Nullable="false" MaxLength="40" sap:display-format="UpperCase" sap:label="Article"
+					sap:quickinfo="Article Number"/><Property Name="CatalogItmKey" Type="Edm.Int32" sap:label="Catalog item key" sap:quickinfo="Catalog Item Key"/><Property Name="image_name" Type="Edm.String" MaxLength="255" sap:display-format="UpperCase" sap:label="Main Image name"
+					sap:quickinfo="Catalog Main Image Name"/><Property Name="mime_type" Type="Edm.String" MaxLength="125" sap:display-format="UpperCase" sap:label="MIME type"
+					sap:quickinfo="XML Catalog: MIME Type"/><Property Name="ImageUrl" Type="Edm.String" MaxLength="1033" sap:label="Image URL"/></EntityType>
+			<Association Name="assoc_C07F0735F92CF7E58F66BD3E878D3E14" sap:content-version="1"><End Type="ZFIAP_SOS_IMAGES_SRV.ZCDS_C_SOS_SKUIMAGEType" Multiplicity="1" Role="FromRole_assoc_C07F0735F92CF7E58F66BD3E878D3E14"/><End Type="ZFIAP_SOS_IMAGES_SRV.ZCDS_I_SOS_IMAGEType" Multiplicity="*" Role="ToRole_assoc_C07F0735F92CF7E58F66BD3E878D3E14"/></Association>
+			<EntityContainer Name="ZFIAP_SOS_IMAGES_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="ZCDS_C_SOS_SKUIMAGE" EntityType="ZFIAP_SOS_IMAGES_SRV.ZCDS_C_SOS_SKUIMAGEType" sap:content-version="1"/><EntitySet Name="ZCDS_I_SOS_IMAGE" EntityType="ZFIAP_SOS_IMAGES_SRV.ZCDS_I_SOS_IMAGEType" sap:content-version="1"/>
+				<AssociationSet Name="assoc_C07F0735F92CF7E58F66BD3E878D3E14" Association="ZFIAP_SOS_IMAGES_SRV.assoc_C07F0735F92CF7E58F66BD3E878D3E14"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="ZCDS_C_SOS_SKUIMAGE" Role="FromRole_assoc_C07F0735F92CF7E58F66BD3E878D3E14"/><End EntitySet="ZCDS_I_SOS_IMAGE" Role="ToRole_assoc_C07F0735F92CF7E58F66BD3E878D3E14"/></AssociationSet>
+			</EntityContainer><atom:link rel="self" href="https://dldf20app00.irving.zalecorp.com:8001/sap/opu/odata/sap/ZFIAP_SOS_IMAGES_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/><atom:link rel="latest-version" href="https://dldf20app00.irving.zalecorp.com:8001/sap/opu/odata/sap/ZFIAP_SOS_IMAGES_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

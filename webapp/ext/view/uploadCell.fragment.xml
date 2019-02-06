@@ -1,0 +1,11 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:u="sap.ui.unified">
+	<VBox>
+		<u:FileUploader id="fileUploader" name="myFileUpload" tooltip="Upload your file to the local server" uploadComplete="handleUploadComplete"
+			uploadAborted="handleUploadAbort" buttonOnly="true" buttonText="Upload Image" sendXHR="true" uploadOnChange="true" useMultipart="false"
+			sameFilenameAllowed="true" change="handleValueChange" style="Emphasized" placeholder="Choose a file for Upload...">
+			<u:headerParameters>
+				<u:FileUploaderParameter name="slug" value="{CatalogSKU}"/>
+			</u:headerParameters>
+		</u:FileUploader>
+	</VBox>
+</core:FragmentDefinition>
