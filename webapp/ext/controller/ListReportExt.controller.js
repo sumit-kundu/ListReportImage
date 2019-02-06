@@ -1,9 +1,9 @@
 sap.ui.controller("sos.uploadimage.ext.controller.ListReportExt", {
-
-	onClickActionZCDS_C_SOS_SKUIMAGE1: function (oEvent) {},
 	onInit: function () {
-		this.byId("listReport").setEnableAutoBinding(true);
-		this.byId("listReport").setShowTablePersonalisation(false);
+		var oSmartTable = this.byId("listReport");
+		oSmartTable.setEnableAutoBinding(true);
+		oSmartTable.setShowTablePersonalisation(false);
+		oSmartTable.getCustomToolbar().setVisible(false);
 		var oPage = this.getView().byId("page");
 		oPage.getTitle().setVisible(false);
 		oPage.getHeader().setVisible(false);
@@ -38,13 +38,12 @@ sap.ui.controller("sos.uploadimage.ext.controller.ListReportExt", {
 		if (sResponse) {
 			var sMsg = "";
 			var sStatus = oEvent.getParameter("status");
-			if (sStatus == "201") {
-				sMsg = "\n" + this.oBundle.getText("uploadSuccess", [oEvent.getParameter("fileName")]);
+			if (sStatus.toString() === "201") {
+				sMsg = this.oBundle.getText("uploadSuccess", [oEvent.getParameter("fileName")]);
 				oEvent.getSource().setValue("");
-				var oSource = oEvent.getSource();
 				this.getView().byId("listReport").rebindTable();
 			} else {
-				sMsg = "\n" + this.oBundle.getText("uploadError", [oEvent.getParameter("fileName")]);
+				sMsg = this.oBundle.getText("uploadError", [oEvent.getParameter("fileName")]);
 				oEvent.getSource().setValue("");
 			}
 			sap.m.MessageToast.show(sMsg);
