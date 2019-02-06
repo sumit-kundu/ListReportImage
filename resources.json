@@ -1,0 +1,145 @@
+{
+    "resources": [
+        {
+            "name": "Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "annotations/annotations.xml"
+        },
+        {
+            "name": "di.code-validation.core_issues.json"
+        },
+        {
+            "name": "ext/controller/ListReportExt-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "ext/controller/ListReportExt.controller.js"
+        },
+        {
+            "name": "ext/view/upload.fragment.xml"
+        },
+        {
+            "name": "ext/view/uploadCell.fragment.xml"
+        },
+        {
+            "name": "extended_runnable_file.html"
+        },
+        {
+            "name": "fioriHtmlRunner.html"
+        },
+        {
+            "name": "i18n/ListReport/ZCDS_C_SOS_SKUIMAGE/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "localService/ZFIAP_SOS_IMAGES_ANNO_MDL.xml"
+        },
+        {
+            "name": "localService/metadata.xml"
+        },
+        {
+            "name": "localService/mockserver-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "localService/mockserver.js"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "neo-app.json"
+        },
+        {
+            "name": "test/extended_runnable_file.html"
+        },
+        {
+            "name": "test/fakeLRep.json"
+        },
+        {
+            "name": "test/flpSandbox.html"
+        },
+        {
+            "name": "test/flpSandboxMockServer.html"
+        },
+        {
+            "name": "tmp/Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "tmp/Component.js"
+        },
+        {
+            "name": "tmp/annotations/annotations.xml"
+        },
+        {
+            "name": "tmp/ext/controller/ListReportExt.controller.js"
+        },
+        {
+            "name": "tmp/ext/view/upload.fragment.xml"
+        },
+        {
+            "name": "tmp/ext/view/uploadCell.fragment.xml"
+        },
+        {
+            "name": "tmp/extended_runnable_file.html"
+        },
+        {
+            "name": "tmp/fioriHtmlRunner.html"
+        },
+        {
+            "name": "tmp/i18n/ListReport/ZCDS_C_SOS_SKUIMAGE/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "tmp/i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "tmp/localService/ZFIAP_SOS_IMAGES_ANNO_MDL.xml"
+        },
+        {
+            "name": "tmp/localService/metadata.xml"
+        },
+        {
+            "name": "tmp/localService/mockserver.js"
+        },
+        {
+            "name": "tmp/manifest.json"
+        },
+        {
+            "name": "tmp/test/extended_runnable_file.html"
+        },
+        {
+            "name": "tmp/test/fakeLRep.json"
+        },
+        {
+            "name": "tmp/test/flpSandbox.html"
+        },
+        {
+            "name": "tmp/test/flpSandboxMockServer.html"
+        },
+        {
+            "name": "tmp-dbg/Component.js"
+        },
+        {
+            "name": "tmp-dbg/ext/controller/ListReportExt.controller.js"
+        },
+        {
+            "name": "tmp-dbg/localService/mockserver.js"
+        }
+    ]
+}
