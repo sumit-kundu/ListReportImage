@@ -2,11 +2,6 @@ sap.ui.controller("sos.uploadimage.ext.controller.ListReportExt", {
 	onInit: function () {
 		var oSmartTable = this.byId("listReport");
 		oSmartTable.setEnableAutoBinding(true);
-		oSmartTable.setShowTablePersonalisation(false);
-		oSmartTable.getCustomToolbar().setVisible(false);
-		var oPage = this.getView().byId("page");
-		oPage.getTitle().setVisible(false);
-		oPage.getHeader().setVisible(false);
 		var i18nModel = new sap.ui.model.resource.ResourceModel({
 			bundleName: "sos.uploadimage.i18n.i18n"
 		});
@@ -14,13 +9,11 @@ sap.ui.controller("sos.uploadimage.ext.controller.ListReportExt", {
 		this.oBundle = this.getView().getModel("i18next").getResourceBundle();
 	},
 	handleValueChange: function (oEvent) {
-		// MessageToast.show("Press 'Upload File' to upload file '" +
-		// 						oEvent.getParameter("newValue") + "'");
 		this.getView().setBusy(true);
 		var oSource = oEvent.getSource();
 		if (oSource.getBindingContext().getProperty("CatalogSKU")) {
 			oSource.setUploadUrl(oSource.getModel().sServiceUrl +
-				oSource.getModel().createKey("/ZCDS_C_SOS_SKUIMAGE", {
+				oSource.getModel().createKey("/ZCDS_C_SKUIMAGE", {
 					CatalogSKU: oSource.getBindingContext().getProperty("CatalogSKU")
 				}) + "/to_SOSImage");
 
@@ -38,7 +31,7 @@ sap.ui.controller("sos.uploadimage.ext.controller.ListReportExt", {
 		if (sResponse) {
 			var sMsg = "";
 			var sStatus = oEvent.getParameter("status");
-			if (sStatus.toString() === "201") {
+			if (sStatus.toString() === "201" || sStatus.toString() === "202") {
 				sMsg = this.oBundle.getText("uploadSuccess", [oEvent.getParameter("fileName")]);
 				oEvent.getSource().setValue("");
 				this.getView().byId("listReport").rebindTable();
@@ -52,5 +45,36 @@ sap.ui.controller("sos.uploadimage.ext.controller.ListReportExt", {
 	handleUploadAbort: function (oEvent) {
 		this.getView().setBusy(false);
 		sap.m.MessageToast.show(this.oBundle.getText("uploadAborted"));
+	},
+	
+	handleFileSize:function (oEvent) {
+		//this.getView().getModel(["i18next]").
+		
+		var allMessage =  this.getView().getModel("i18next").getResourceBundle().getText("fileSize",[oEvent.getParameter("fileName")]);
+		sap.m.MessageBox.show(allMessage, {
+			icon: sap.m.MessageBox.Icon.ERROR, // default sap-icon://message-success
+			title:  this.getView().getModel("i18next").getResourceBundle().getText("sizeError"), // default
+			actions: sap.m.MessageBox.Action.OK, // default
+			onClose: null, // default
+			styleClass: "", // default
+			initialFocus: null, // default
+			textDirection: sap.ui.core.TextDirection.Inherit // default
+		});
+	},
+	
+	handleTypeMismatch: function(oEvent) {
+		
+		var allMessage =  this.getView().getModel("i18next").getResourceBundle().getText("fileType",[oEvent.getParameter("fileName")]);
+		sap.m.MessageBox.show(allMessage, {
+			icon: sap.m.MessageBox.Icon.ERROR, // default sap-icon://message-success
+			title:  this.getView().getModel("i18next").getResourceBundle().getText("typeError"), // default
+			actions: sap.m.MessageBox.Action.OK, // default
+			onClose: null, // default
+			styleClass: "", // default
+			initialFocus: null, // default
+			textDirection: sap.ui.core.TextDirection.Inherit // default
+		});
+
+	
 	}
 });

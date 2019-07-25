@@ -14,18 +14,18 @@
 		},
 		"dataSources": {
 			"mainService": {
-				"uri": "/sap/opu/odata/sap/ZFIAP_SOS_IMAGES_SRV/",
+				"uri": "/sap/opu/odata/sap/Z_IMAGES_SRV/",
 				"type": "OData",
 				"settings": {
 					"annotations": [
-						"ZFIAP_SOS_IMAGES_ANNO_MDL",
+						"Z_IMAGES_ANNO_MDL",
 						"localAnnotations"
 					],
 					"localUri": "localService/metadata.xml"
 				}
 			},
 			"userService": {
-				"uri": "/sap/opu/odata/sap/ZCDS_C_SOSREQUEST_ST_TP_CDS/",
+				"uri": "/sap/opu/odata/sap/ZCDS_C_REQUEST_ST_TP_CDS/",
 				"type": "OData",
 				"settings": {
 					"annotations": [
@@ -34,10 +34,10 @@
 				}
 			},
 			"ZFIAP_SOS_IMAGES_ANNO_MDL": {
-				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZFIAP_SOS_IMAGES_ANNO_MDL',Version='0001')/$value/",
+				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='Z_IMAGES_ANNO_MDL',Version='0001')/$value/",
 				"type": "ODataAnnotation",
 				"settings": {
-					"localUri": "localService/ZFIAP_SOS_IMAGES_ANNO_MDL.xml"
+					"localUri": "localService/Z_IMAGES_ANNO_MDL.xml"
 				}
 			},
 			"localAnnotations": {
@@ -97,15 +97,15 @@
 				"type": "sap.ui.model.resource.ResourceModel",
 				"uri": "i18n/i18n.properties"
 			},
-			"i18n|sap.suite.ui.generic.template.ListReport|ZCDS_C_SOS_SKUIMAGE": {
+			"i18n|sap.suite.ui.generic.template.ListReport|ZCDS_C_SKUIMAGE": {
 				"type": "sap.ui.model.resource.ResourceModel",
-				"uri": "i18n/ListReport/ZCDS_C_SOS_SKUIMAGE/i18n.properties"
+				"uri": "i18n/ListReport/ZCDS_C_SKUIMAGE/i18n.properties"
 			},
-			"i18n|sap.suite.ui.generic.template.ObjectPage|ZCDS_C_SOS_SKUIMAGE": {
+			"i18n|sap.suite.ui.generic.template.ObjectPage|ZCDS_C_SKUIMAGE": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"uri": "i18n/ObjectPage/ZCDS_C_SOS_SKUIMAGE/i18n.properties"
 			},
-			"i18n|sap.suite.ui.generic.template.ObjectPage|ZCDS_I_SOS_IMAGE": {
+			"i18n|sap.suite.ui.generic.template.ObjectPage|ZCDS_I_IMAGE": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"uri": "i18n/ObjectPage/ZCDS_I_SOS_IMAGE/i18n.properties"
 			},
@@ -132,12 +132,12 @@
 			"extensions": {
 				"sap.ui.viewExtensions": {
 					"sap.suite.ui.generic.template.ListReport.view.ListReport": {
-						"ResponsiveTableColumnsExtension|ZCDS_C_SOS_SKUIMAGE": {
+						"ResponsiveTableColumnsExtension|ZCDS_C_SKUIMAGE": {
 							"type": "XML",
 							"className": "sap.ui.core.Fragment",
 							"fragmentName": "sos.uploadimage.ext.view.upload"
 						},
-						"ResponsiveTableCellsExtension|ZCDS_C_SOS_SKUIMAGE": {
+						"ResponsiveTableCellsExtension|ZCDS_C_SKUIMAGE": {
 							"type": "XML",
 							"className": "sap.ui.core.Fragment",
 							"fragmentName": "sos.uploadimage.ext.view.uploadCell"
@@ -149,7 +149,7 @@
 						"controllerName": "sos.uploadimage.ext.controller.ListReportExt",
 						"sap.ui.generic.app": {
 							"ZCDS_C_SOS_SKUIMAGE": {
-								"EntitySet": "ZCDS_C_SOS_SKUIMAGE"
+								"EntitySet": "ZCDS_C_SKUIMAGE"
 							}
 						}
 					}
@@ -170,8 +170,8 @@
 			}
 		},
 		"pages": {
-			"ListReport|ZCDS_C_SOS_SKUIMAGE": {
-				"entitySet": "ZCDS_C_SOS_SKUIMAGE",
+			"ListReport|ZCDS_C_SKUIMAGE": {
+				"entitySet": "ZCDS_C_SKUIMAGE",
 				"component": {
 					"name": "sap.suite.ui.generic.template.ListReport",
 					"list": true,
