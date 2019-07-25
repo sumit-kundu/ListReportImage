@@ -3,8 +3,8 @@
 	<edmx:Reference Uri="/sap/bc/ui5_ui5/ui2/ushell/resources/sap/ushell/components/factsheet/vocabularies/UI.xml">
 		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
 	</edmx:Reference>
-	<edmx:Reference Uri="/sap/opu/odata/sap/ZFIAP_SOS_IMAGES_SRV/$metadata">
-		<edmx:Include Alias="ZFIAP_SOS_IMAGES_SRV" Namespace="ZFIAP_SOS_IMAGES_SRV"/>
+	<edmx:Reference Uri="/sap/opu/odata/sap/Z_IMAGES_SRV/$metadata">
+		<edmx:Include Alias="Z_IMAGES_SRV" Namespace="Z_IMAGES_SRV"/>
 	</edmx:Reference>
 	<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Aggregation.V1.xml">
 		<edmx:Include Alias="Aggregation" Namespace="Org.OData.Aggregation.V1"/>
@@ -31,11 +31,11 @@
 		<edmx:Include Alias="Validation" Namespace="Org.OData.Validation.V1"/>
 	</edmx:Reference>
 	<edmx:DataServices>
-		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="sos.uploadimage.ZFIAP_SOS_IMAGES_SRV">
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="sos.uploadimage.Z_IMAGES_SRV">
 			<!--===============================================================================
                 Entity Type from chosen collection 
                 ================================================================================-->
-			<Annotations Target="ZFIAP_SOS_IMAGES_SRV.ZCDS_C_SOS_SKUIMAGEType">
+			<Annotations Target="Z_IMAGES_SRV.ZCDS_C_SKUIMAGEType">
 				<Annotation Term="UI.LineItem">
 					<Collection>
 						<Record Type="UI.DataField">
@@ -51,7 +51,7 @@
 						</Record>
 					</Collection>
 				</Annotation>
-				<Annotations Target="ZFIAP_SOS_IMAGES_SRV.ZCDS_C_SOS_SKUIMAGEType/GetUrl">
+				<Annotations Target="Z_IMAGES_SRV.ZCDS_C_SKUIMAGEType/GetUrl">
 					<Annotation Term="UI.IsImageUrl"/>
 				<!--<Annotation Term="Common.Text" String="sku image"/>-->
 				</Annotations>
@@ -79,7 +79,7 @@
 			<!--===============================================================================
                 Entity Type from chosen navigation property
                 ================================================================================-->
-			<Annotations Target="ZFIAP_SOS_IMAGES_SRV.ZCDS_I_SOS_IMAGEType">
+			<Annotations Target="Z_IMAGES_SRV.ZCDS_I_IMAGEType">
 				<Annotation Term="UI.Facets">
 					<Collection>
 						<Record Type="UI.CollectionFacet">
