@@ -24,16 +24,7 @@
 					"localUri": "localService/metadata.xml"
 				}
 			},
-			"userService": {
-				"uri": "/sap/opu/odata/sap/ZCDS_C_REQUEST_ST_TP_CDS/",
-				"type": "OData",
-				"settings": {
-					"annotations": [
-						"localAnnotations"
-					]
-				}
-			},
-			"ZFIAP_SOS_IMAGES_ANNO_MDL": {
+			"Z_IMAGES_ANNO_MDL": {
 				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='Z_IMAGES_ANNO_MDL',Version='0001')/$value/",
 				"type": "ODataAnnotation",
 				"settings": {
